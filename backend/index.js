@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 
 const allowedOrigins = [
-  'https://responsive-calendar.onrender.com', 
+  'https://responsive-calendar.onrender.com',
+  'https://responsive-calendar-eight.vercel.app',
   'http://localhost:5173' // for local development (Vite default port)
 ];
 
