@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/goals/create';
+const API_URL = 'https://responsive-calendar-backend.onrender.com/api/goals/create';
 
 const getAllGoals = async () => {
   const response = await axios.get(API_URL);

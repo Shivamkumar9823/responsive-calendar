@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/events';
+const API_URL = 'https://responsive-calendar-backend.onrender.com/api/events';
 
 const getAllEvents = async () => {
   const response = await axios.get(API_URL);
