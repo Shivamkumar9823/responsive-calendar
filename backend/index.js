@@ -13,14 +13,17 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 
 const allowedOrigins = [
-  'https://responsive-calendar.onrender.com/', // your actual frontend domain
+  'https://responsive-calendar.onrender.com/', 
   'http://localhost:5173' // for local development (Vite default port)
 ];
 
 app.use(cors({
   origin: allowedOrigins,
-  credentials: true // if you're using cookies or auth headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Explicitly specify allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'],    // Explicitly specify allowed headers
+  credentials: true  // if you're using cookies or auth headers
 }));
+
 app.use(express.json());
 
 // Database connection
